@@ -42,12 +42,14 @@ def passwordman():
     cont = cont.lower()
 
     while cont == "yes":
-        path = '/home/linux/Desktop'
-        fullpath = os.path.join(path, 'passwords.txt')
-        passfile = open(fullpath, 'a')
+        #path = '/home/linux/Desktop'
+        #fullpath = os.path.join(path, 'passwords.txt')
+        passfile = open('passwords.txt', 'a')
         passfile.write(create_pass() + "\n")
         passfile.close()
 
         cont = input("WOULD YOU LIKE TO ADD MORE PASSWORDS? ")
         cont = cont.lower()
+
+
 passwordman()
